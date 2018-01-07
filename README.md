@@ -1,1 +1,30 @@
 # agk.calccurring
+```javascript 
+    
+  function write(x, z=null) {
+    if(!z){
+      return function(y) {
+        if (y) {
+          return String(x) + String(y);
+        }
+        return x;
+      };
+    }
+    else{
+      return String(x) + String(z);
+    }
+  }
+
+  console.log(write('a','b'));  
+  console.log(write(1,2));
+  console.log(write('a')('b'));
+  console.log(write(1)(2));
+
+```
+
+```sh
+    ab
+    12
+    ab
+    12
+```
